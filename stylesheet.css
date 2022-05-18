@@ -1,0 +1,103 @@
+body {
+    display: flex;
+    justify-content: center;
+}
+
+form {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid black;
+    display: grid;
+    grid: repeat(11, 1fr) / 1fr 2fr;
+    grid-template-areas: 
+        "emailLabel email"
+        ". emailError"
+        "countryLabel country"
+        ". countryError"
+        "zipLabel zip"
+        ". zipError"
+        "passwordLabel password"
+        ". passwordError"
+        "passwordConfirmLabel passwordConfirm"
+        ". passwordConfirmError"
+        "submit submit";
+}
+
+.error {
+    border: 1px solid red;
+}
+
+.errorMessage {
+    color: red;
+    font-weight: bold;
+    font-size: small;
+}
+
+label {
+    justify-self: end;
+}
+
+#emailLabel {
+    grid-area: emailLabel;
+}
+
+#email{
+    grid-area: email;
+}
+
+#emailError {
+    grid-area: emailError;
+}
+
+#countryLabel {
+    grid-area: countryLabel;
+}
+
+#country{
+    grid-area: country;
+}
+
+#countryError {
+    grid-area: countryError;
+}
+
+#zipLabel {
+    grid-area: zipLabel;
+}
+
+#zip{
+    grid-area: zip;
+}
+
+#zipError {
+    grid-area: zipError;
+}
+
+#passwordLabel {
+    grid-area: passwordLabel;
+}
+
+#password{
+    grid-area: password;
+}
+
+#passwordError {
+    grid-area: passwordError;
+}
+
+#passwordConfirmLabel {
+    grid-area: passwordConfirmLabel;
+}
+
+#passwordConfirm{
+    grid-area: passwordConfirm;
+}
+
+#passwordConfirmError {
+    grid-area: passwordConfirmError;
+}
+
+#submit {
+    grid-area: submit;
+    justify-self: center;
+}
